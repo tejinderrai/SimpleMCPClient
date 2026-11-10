@@ -9,11 +9,9 @@ class Program
 {
     static async Task Main()
     {
-        // Build configuration  
         var builder = new ConfigurationBuilder()
             .AddConfiguration(new ConfigurationBuilder().AddJsonFile("appsettings.json", optional: false, reloadOnChange: true).Build());
-            
-
+        
         IConfiguration config = builder.Build(); // Create the configuration root  
 
         References.McpServerURI = config["MCPServerURL"] ?? "Not loaded";
