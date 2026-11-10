@@ -45,7 +45,7 @@ class Program
        
         JsonArray resultsArray = (mcpResponse)["results"] as JsonArray ?? new JsonArray();
 
-        if (resultsArray != null) // Check if the departments array is not null and print each department
+        if (resultsArray != null)
         {
             foreach (var result in resultsArray)
             {
